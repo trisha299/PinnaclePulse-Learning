@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/style_admin.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">
+        <a href="#">PinnaclePulse</a>
+      </div>
+      <ul class="nav__links">
+        <li class="links"><a href="#">Home</a></li>
+        <li class="links"><a href="#">About Us</a></li>
+        <li class="links"><a href="#">Courses</a></li>
+        <li class="links"><a href="#">Teach at PinnaclePulse</a></li>
+        <li class="links"><a href="#" class="nav__btn">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="admin_container">
+      <h2>Admin Dashboard</h2>
+      <div class="admin_dashboard"></div>
+      <div class="buttons">
+        <button id="create-course">Create Course</button>
+        <button id="assign-faculty">Assign Faculty</button>
+        <!-- Add more buttons for other functionalities -->
+      </div>
+      <div class="create-course hidden">
+        <h3>Create Course</h3>
+        <div class="form-group">
+          <label for="course-name">Course Name:</label>
+          <input type="text" id="course-name" placeholder="Enter course name" />
+        </div>
+        <div class="form-group">
+          <label for="faculty">Select Faculty:</label>
+          <select id="faculty">
+            <option value="">-- Select Faculty --</option>
+            <option value="faculty1">Faculty 1</option>
+            <option value="faculty2">Faculty 2</option>
+            <option value="faculty3">Faculty 3</option>
+            <!-- Add more faculty options as needed -->
+          </select>
+        </div>
+        <div class="form-group">
+          <button id="create-course-btn">Create Course</button>
+        </div>
+      </div>
+      <div class="assign-faculty hidden">
+        <h3>Assign Faculty</h3>
+        <!-- Add assignment faculty form or content here -->
+      </div>
+      <!-- Add more divs for other functionalities as needed -->
+
+      <button id="back-to-dashboard" class="hidden">Back to Dashboard</button>
+    </div>
+
+    <script>
+      const createCourseBtn = document.getElementById("create-course");
+      const assignFacultyBtn = document.getElementById("assign-faculty");
+      const backToDashboardBtn = document.getElementById("back-to-dashboard");
+      const createCourseSection = document.querySelector(".create-course");
+      const assignFacultySection = document.querySelector(".assign-faculty");
+
+      createCourseBtn.addEventListener("click", function () {
+        // Hide original buttons, show corresponding section, show back to dashboard button
+        document.querySelector(".buttons").classList.add("hidden");
+        createCourseSection.classList.remove("hidden");
+        backToDashboardBtn.classList.remove("hidden");
+      });
+
+      assignFacultyBtn.addEventListener("click", function () {
+        // Hide original buttons, show corresponding section, show back to dashboard button
+        document.querySelector(".buttons").classList.add("hidden");
+        assignFacultySection.classList.remove("hidden");
+        backToDashboardBtn.classList.remove("hidden");
+      });
+
+      backToDashboardBtn.addEventListener("click", function () {
+        // Show original buttons, hide all sections, hide back to dashboard button
+        document.querySelector(".buttons").classList.remove("hidden");
+        createCourseSection.classList.add("hidden");
+        assignFacultySection.classList.add("hidden");
+        backToDashboardBtn.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
