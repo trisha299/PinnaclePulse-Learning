@@ -201,6 +201,62 @@ nav{
     
 }
 
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.7rem 2.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style for the links inside the dropdown */
+  .links {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+  }
+  
+  /* Change color of links on hover */
+  .links:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Hide the dropdown content when button is not hovered */
+  .dropdown-content {
+    display: none;
+  }
+  
+  /* Position dropdown content right below the button */
+  .dropdown-content {
+    top: 100%;
+    left: 0;
+  }
+
 .image__content li
 {
     margin-bottom: 0.5rem;
