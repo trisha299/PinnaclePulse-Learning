@@ -207,7 +207,7 @@ nav{
     display: inline-block;
 }
 
-.dropdown-btn {
+#login-btn {
     background-color: #4CAF50;
     color: white;
     padding: 0.7rem 2.5rem;
@@ -217,7 +217,16 @@ nav{
     border-radius: 5px;
     cursor: pointer;
   }
-
+#register-btn {
+    background-color: #4531df;
+    color: white;
+    padding: 0.7rem 2.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 /* Style for the dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
